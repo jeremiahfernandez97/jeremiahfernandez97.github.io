@@ -1041,7 +1041,7 @@ document.querySelector('.handle-experience-senior-creative-developer').ontouchen
 
 //junior dev
 document.querySelector('.handle-experience-junior-developer').onclick = function() {
-    showExperienceDetails('experience-junior-developer', 'Senior Creative Developer</b>,<br/>Wideout Workforces Inc. (Jan 2022 – Apr 2022)')
+    showExperienceDetails('experience-junior-developer', 'Junior Developer</b>,<br/>Webseeds Inc. (Dec 2022 – Mar 2023)')
 }
 
 document.querySelector('.handle-experience-junior-developer').ontouchstart = function(e) {
