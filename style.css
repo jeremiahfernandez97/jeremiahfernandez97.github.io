@@ -995,6 +995,7 @@ ul.dashed > li:before {
         cursor: pointer;
         line-height: 18px;
         display: none;
+        animation: glow3 2s infinite;
     }
     
   
@@ -1109,6 +1110,7 @@ ul.dashed > li:before {
         cursor: pointer;
         line-height: 18px;
         display: none;
+        animation: glow3 2s infinite;
     }
     
   
@@ -1272,4 +1274,10 @@ ul.dashed > li:before {
 .mobile-controls-all {
     display: none;
     font-family: Cascadia, sans-serif;
+}
+
+@keyframes glow3 {
+    0% {opacity: .35}
+    50% {opacity: 1}
+    100% {opacity: .35}
 }
