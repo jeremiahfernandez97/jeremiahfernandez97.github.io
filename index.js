@@ -1041,7 +1041,7 @@ document.querySelector('.handle-experience-senior-creative-developer').ontouchen
 
 //junior dev
 document.querySelector('.handle-experience-junior-developer').onclick = function() {
-    showExperienceDetails('experience-junior-developer', 'Junior Developer</b>,<br/>Webseeds Inc. (Dec 2022 – Mar 2023)')
+    showExperienceDetails('experience-junior-developer', 'Web Developer</b>,<br/>Freelance (Dec 2022 – Present)')
 }
 
 document.querySelector('.handle-experience-junior-developer').ontouchstart = function(e) {
@@ -1049,7 +1049,7 @@ document.querySelector('.handle-experience-junior-developer').ontouchstart = fun
 }
 
 document.querySelector('.handle-experience-junior-developer').ontouchend = function() {
-    showExperienceDetails('experience-junior-developer', 'Junior Developer</b>,<br/>Webseeds Inc. (Dec 2022 – Mar 2023)')
+    showExperienceDetails('experience-junior-developer', 'Web Developer</b>,<br/>Freelance (Dec 2022 – Present)')
 }
 
 //internship-web-developer
