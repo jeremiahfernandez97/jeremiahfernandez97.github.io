@@ -6,6 +6,7 @@ window.addEventListener("load", function() {
     document.querySelector('.loading').style.display = 'none';
     document.querySelector('.game').style.display = 'block';
     document.querySelector('.modal').style.opacity = '1';
+    typewriter();
 }, false);
 
 window.addEventListener('keydown',function(e) {
@@ -27,20 +28,42 @@ window.addEventListener('keydown',function(e) {
             innerModalOpen = false;
         } else {
             //also triggered when initializedGame == false
-            document.querySelectorAll('.modal').forEach(function(modal){
-                modal.style.display = 'none';
-                modalOpen = 'none';
-            })
+            if (document.querySelector(".tree-message").style.display != "none") {
+                document.querySelector(".tree-message-2").style.display = "block";
+                document.querySelector(".tree-message-2").style.opacity = "1";
+                document.querySelector(".tree-message").style.display = "none";
+                document.querySelector(".tree-message").style.opacity = "0";
+                let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with 3 years<br/>of hands-on industry experience, and a<br/>keen eye for design and usability.<br/><br/>From interactive web pages to animated banner ads,<br/>I have been in teams with clients overseas to<br/>help them make their ideas come to life.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                document.querySelector("#typedtext").style.display = "none";
+                if(document.querySelector("#typedtext-complete").innerHTML == "") {
+                    document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
+                }
+                if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                    typewriter2();
+                }
+            } else {
+                document.querySelectorAll('.modal').forEach(function(modal){
+                    modal.style.display = 'none';
+                    modalOpen = 'none';
+                    let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or <b>✖</b> to close dialog boxes";
+                    document.querySelector("#typedtext2").style.display = "none";
+                    if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                        document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
+                    }
+                })
+            }
         }
     }
 })
 
 document.querySelectorAll('.close').forEach(function(close){
+    // console.log(close.classList);
     close.onclick = function() {
+
         if (initializedGame == false) {
             loadGame();
             initializedGame = true;
-            playSound(startGameSound, .100);
+            playSound(startGameSound, .050);
             document.querySelector('.toggle-onscreen-controls').style.display = 'block';
             document.querySelector('.level-indicator').style.display = 'block';
             document.querySelector('.credits').style.display = 'block';
@@ -54,10 +77,30 @@ document.querySelectorAll('.close').forEach(function(close){
             innerModalOpen = false;
         } else {
             //also triggered when initializedGame == false
-            document.querySelectorAll('.modal').forEach(function(modal){
-                modal.style.display = 'none';
-                modalOpen = 'none';
-            })
+            if (close.classList.contains("close-tree-message")) {
+                document.querySelector(".tree-message-2").style.display = "block";
+                document.querySelector(".tree-message-2").style.opacity = "1";
+                document.querySelector(".tree-message").style.display = "none";
+                document.querySelector(".tree-message").style.opacity = "0";
+                let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with 3 years<br/>of hands-on industry experience, and a<br/>keen eye for design and usability.<br/><br/>From interactive web pages to animated banner ads,<br/>I have been in teams with clients overseas to<br/>help them make their ideas come to life.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                document.querySelector("#typedtext").style.display = "none";
+                if(document.querySelector("#typedtext-complete").innerHTML == "") {
+                    document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
+                }
+                if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                    typewriter2();
+                }
+            } else {
+                document.querySelectorAll('.modal').forEach(function(modal){
+                    modal.style.display = 'none';
+                    modalOpen = 'none'; 
+                    let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or <b>✖</b> to close dialog boxes";
+                    document.querySelector("#typedtext2").style.display = "none";
+                    if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                        document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
+                    }
+                })   
+            }
         }
     }
 })
@@ -646,7 +689,7 @@ function mobile_controls() {
             if (initializedGame == false) {
                 loadGame();
                 initializedGame = true;
-                playSound(startGameSound, .100);
+                playSound(startGameSound, .050);
                 document.querySelector('.toggle-onscreen-controls').style.display = 'block';
                 document.querySelector('.level-indicator').style.display = 'block';
                 document.querySelector('.credits').style.display = 'block';
@@ -660,10 +703,30 @@ function mobile_controls() {
                 innerModalOpen = false;
             } else {
                 //also triggered when initializedGame == false
-                document.querySelectorAll('.modal').forEach(function(modal){
-                    modal.style.display = 'none';
-                    modalOpen = 'none';
-                })
+                if (close.classList.contains("close-tree-message")) {
+                    document.querySelector(".tree-message-2").style.display = "block";
+                    document.querySelector(".tree-message-2").style.opacity = "1";
+                    document.querySelector(".tree-message").style.display = "none";
+                    document.querySelector(".tree-message").style.opacity = "0";
+                    let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with 3 years<br/>of hands-on industry experience, and a<br/>keen eye for design and usability.<br/><br/>From interactive web pages to animated banner ads,<br/>I have been in teams with clients overseas to<br/>help them make their ideas come to life.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                    document.querySelector("#typedtext").style.display = "none";
+                    if(document.querySelector("#typedtext-complete").innerHTML == "") {
+                        document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
+                    }
+                    if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                        typewriter2();
+                    }
+                } else {
+                    document.querySelectorAll('.modal').forEach(function(modal){
+                        modal.style.display = 'none';
+                        modalOpen = 'none';   
+                        let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or <b>✖</b> to close dialog boxes";
+                        document.querySelector("#typedtext2").style.display = "none";
+                        if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                            document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
+                        }
+                    }) 
+                }
             }
         }
     })
@@ -760,7 +823,7 @@ function mobile_controls() {
         if (initializedGame == false) {
             loadGame();
             initializedGame = true;
-            playSound(startGameSound, .100);
+            playSound(startGameSound, .050);
             document.querySelector('.toggle-onscreen-controls').style.display = 'block';
             document.querySelector('.level-indicator').style.display = 'block';
             document.querySelector('.credits').style.display = 'block';
@@ -1015,7 +1078,7 @@ function showExperienceDetails(experience, header) {
 
 //creative dev
 document.querySelector('.handle-experience-creative-developer').onclick = function() {
-    showExperienceDetails('experience-creative-developer', '<b>Creative Developer</b>,<br/>Wideout Workforces Inc. (Jun 2019 – Dec 2021)')
+    showExperienceDetails('experience-creative-developer', '<b>Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jun 2019 – Dec 2021)</span>')
 }
 
 document.querySelector('.handle-experience-creative-developer').ontouchstart = function(e) {
@@ -1023,12 +1086,12 @@ document.querySelector('.handle-experience-creative-developer').ontouchstart = f
 }
 
 document.querySelector('.handle-experience-creative-developer').ontouchend = function() {
-    showExperienceDetails('experience-creative-developer', '<b>Creative Developer</b>,<br/>Wideout Workforces Inc. (Jun 2019 – Dec 2021)');
+    showExperienceDetails('experience-creative-developer', '<b>Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jun 2019 – Dec 2021)</span>');
 }
 
 //senior creative dev
 document.querySelector('.handle-experience-senior-creative-developer').onclick = function() {
-    showExperienceDetails('experience-senior-creative-developer', 'Senior Creative Developer</b>,<br/>Wideout Workforces Inc. (Jan 2022 – Apr 2022)')
+    showExperienceDetails('experience-senior-creative-developer', 'Senior Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jan 2022 – Apr 2022)</span>')
 }
 
 document.querySelector('.handle-experience-senior-creative-developer').ontouchstart = function(e) {
@@ -1036,12 +1099,12 @@ document.querySelector('.handle-experience-senior-creative-developer').ontouchst
 }
 
 document.querySelector('.handle-experience-senior-creative-developer').ontouchend = function() {
-    showExperienceDetails('experience-senior-creative-developer', 'Senior Creative Developer</b>,<br/>Wideout Workforces Inc. (Jan 2022 – Apr 2022)')
+    showExperienceDetails('experience-senior-creative-developer', 'Senior Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jan 2022 – Apr 2022)</span>')
 }
 
 //junior dev
 document.querySelector('.handle-experience-junior-developer').onclick = function() {
-    showExperienceDetails('experience-junior-developer', 'Web Developer</b>,<br/>Freelance (Dec 2022 – Present)')
+    showExperienceDetails('experience-junior-developer', 'Web Developer</b><br/><span class="grey-out">Freelance (Dec 2022 – Present)</span>')
 }
 
 document.querySelector('.handle-experience-junior-developer').ontouchstart = function(e) {
@@ -1049,12 +1112,12 @@ document.querySelector('.handle-experience-junior-developer').ontouchstart = fun
 }
 
 document.querySelector('.handle-experience-junior-developer').ontouchend = function() {
-    showExperienceDetails('experience-junior-developer', 'Web Developer</b>,<br/>Freelance (Dec 2022 – Present)')
+    showExperienceDetails('experience-junior-developer', 'Web Developer</b><br/><span class="grey-out">Freelance (Dec 2022 – Present)</span>')
 }
 
 //internship-web-developer
 document.querySelector('.handle-internship-web-developer').onclick = function() {
-    showExperienceDetails('internship-web-developer', '<b>Web Development Intern</b>,<br/>FFUF Manila Inc. (Apr 2018 – Jun 2018)')
+    showExperienceDetails('internship-web-developer', '<b>Web Development Intern</b><br/><span class="grey-out">FFUF Manila Inc. (Apr 2018 – Jun 2018)</span>')
 }
 
 document.querySelector('.handle-internship-web-developer').ontouchstart = function(e) {
@@ -1062,12 +1125,12 @@ document.querySelector('.handle-internship-web-developer').ontouchstart = functi
 }
 
 document.querySelector('.handle-internship-web-developer').ontouchend = function() {
-    showExperienceDetails('internship-web-developer', '<b>Web Development Intern</b>,<br/>FFUF Manila Inc. (Apr 2018 – Jun 2018)')
+    showExperienceDetails('internship-web-developer', '<b>Web Development Intern</b><br/><span class="grey-out">FFUF Manila Inc. (Apr 2018 – Jun 2018)</span>')
 }
 
 //education-college
 document.querySelector('.handle-education-college').onclick = function() {
-    showExperienceDetails('education-college', 'B.S. in Computer Science</b>,<br/>Mabini Colleges of Daet (Graduated April 2019)')
+    showExperienceDetails('education-college', 'B.S. in Computer Science</b><br/><span class="grey-out">Mabini Colleges of Daet (Graduated April 2019)</span>')
 }
 
 document.querySelector('.handle-education-college').ontouchstart = function(e) {
@@ -1075,12 +1138,12 @@ document.querySelector('.handle-education-college').ontouchstart = function(e) {
 }
 
 document.querySelector('.handle-education-college').ontouchend = function() {
-    showExperienceDetails('education-college', 'B.S. in Computer Science</b>,<br/>Mabini Colleges of Daet (Graduated April 2019)')
+    showExperienceDetails('education-college', 'B.S. in Computer Science</b><br/><span class="grey-out">Mabini Colleges of Daet (Graduated April 2019)</span>')
 }
 
 //education-eskwelabs
 document.querySelector('.handle-education-eskwelabs').onclick = function() {
-    showExperienceDetails('education-eskwelabs','<b>Eskwelabs Data Science Fellow</b>,<br/>(May 2022 - Aug 2022)')
+    showExperienceDetails('education-eskwelabs','<b>Eskwelabs Data Science Fellow</b><br/><span class="grey-out">(May 2022 - Aug 2022)</span>')
 }
 
 document.querySelector('.handle-education-eskwelabs').ontouchstart = function(e) {
@@ -1088,7 +1151,7 @@ document.querySelector('.handle-education-eskwelabs').ontouchstart = function(e)
 }
 
 document.querySelector('.handle-education-eskwelabs').ontouchend = function() {
-    showExperienceDetails('education-eskwelabs','<b>Eskwelabs Data Science Fellow</b>,<br/>(May 2022 - Aug 2022)')
+    showExperienceDetails('education-eskwelabs','<b>Eskwelabs Data Science Fellow</b><br/><span class="grey-out">(May 2022 - Aug 2022)</span>')
 }
 
 //handle-contact-linkedin
@@ -1105,3 +1168,87 @@ document.querySelector('.handle-education-eskwelabs').ontouchend = function() {
 //     // showExperienceDetails('education-eskwelabs','<b>Data Science Fellow</b>,<br/>Eskwelabs (May 2022 - Aug 2022)')
 //     window.open('https://www.linkedin.com/in/jeremiahfernandez97', '_blank').focus();
 // }
+
+    var aText = new Array(
+        "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b>",
+        " ",
+        "A developer with 3 years of hands-on industry experience, and a keen eye for design and usability.",
+        " ",
+        "From interactive web pages to animated banner ads, I have been in teams with clients overseas to help them make their ideas come to life.",
+        " ",
+        "<b style='font-size: 25px'>Close this dialog box to begin</b>"
+    );
+
+    var iSpeed = 40; // time delay of print out
+    var iIndex = 0; // start printing array at this posision
+    var iArrLength = aText[0].length; // the length of the text array
+    var iScrollAt = 20; // start scrolling up at this many lines
+     
+    var iTextPos = 0; // initialise text position
+    var sContents = ''; // initialise contents variable
+    var iRow; // initialise current row
+     
+    function typewriter()
+    {
+     sContents =  ' ';
+     iRow = Math.max(0, iIndex-iScrollAt);
+     var destination = document.getElementById("typedtext");
+     
+     while ( iRow < iIndex ) {
+      sContents += aText[iRow++] + '<br />';
+     }
+     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+     if ( iTextPos++ == iArrLength ) {
+      iTextPos = 0;
+      iIndex++;
+      if ( iIndex != aText.length ) {
+       iArrLength = aText[iIndex].length;
+       setTimeout("typewriter()", 500);
+      }
+     } else {
+      setTimeout("typewriter()", iSpeed);
+     }
+    }
+    
+  
+    
+
+    var aText2 = new Array(
+        // " To move around, use <span class='controls-tooltip'>W</span> <span class='controls-tooltip'>A</span> <span class='controls-tooltip'>S</span> <span class='controls-tooltip'>D</span>",
+        // " or the arrow keys <span class='controls-tooltip'>◄</span> <span class='controls-tooltip'>▲</span> <span class='controls-tooltip'>▼</span> <span class='controls-tooltip'>►</span>",
+        // "Press <span class='controls-tooltip'>space</span> or <span class='controls-tooltip'>&#10006;</span> to close dialog boxes."
+        "To move around, use <b class='controls-tooltip'>W A S D</b>",
+        "or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b>",
+        "Press <b class='controls-tooltip'>[space]</b> or <b>✖</b> to close dialog boxes"
+    );
+
+    var iSpeed2 = 40; // time delay of print out
+    var iIndex2 = 0; // start printing array at this posision
+    var iArrLength2 = aText2[0].length; // the length of the text array
+    var iScrollAt2 = 20; // start scrolling up at this many lines
+     
+    var iTextPos2 = 0; // initialise text position
+    var sContents2 = ''; // initialise contents variable
+    var iRow2; // initialise current row
+     
+    function typewriter2()
+    {
+     sContents2 =  ' ';
+     iRow2 = Math.max(0, iIndex2-iScrollAt2);
+     var destination2 = document.getElementById("typedtext2");
+     
+     while ( iRow2 < iIndex2 ) {
+      sContents2 += aText2[iRow2++] + '<br />';
+     }
+     destination2.innerHTML = sContents2 + aText2[iIndex2].substring(0, iTextPos2) + "_";
+     if ( iTextPos2++ == iArrLength2 ) {
+      iTextPos2 = 0;
+      iIndex2++;
+      if ( iIndex2 != aText2.length ) {
+       iArrLength2 = aText2[iIndex2].length;
+       setTimeout("typewriter2()", 500);
+      }
+     } else {
+      setTimeout("typewriter2()", iSpeed);
+     }
+    }

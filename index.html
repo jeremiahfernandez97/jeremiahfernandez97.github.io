@@ -13,12 +13,14 @@
   <body>
     <div class="loading">please wait</div>
     <div class="game">
-      
+
       <div class="modal tree-message">
-        <!-- <div class="modal-scrollable-container"> -->
-          <div class="modal-header"><span class="header-text"></span><span class="close">&#10006;</span></div>
+          <div class="modal-header"><span class="header-text"></span><span class="close close-tree-message">&#10006;</span></div>
           <br/>
-          <b style="font-size: 25px">Hello, I'm Jeremiah!</b>
+          <div id="typedtext"></div>
+          <div id="typedtext-complete"></div>
+          <br/>
+          <!-- <b style="font-size: 25px">Hello, I'm Jeremiah!</b>
           <br/>
           <br/>
           A developer with 3 years<br/>of hands-on industry experience, and a<br/>keen eye for design and usability.
@@ -26,27 +28,22 @@
           <br/>
           From interactive web pages to animated banner ads,<br/>
           I have been in teams with clients overseas to<br/>help them make their ideas come to life.
-          <!-- <br/>
           <br/>
-          With familiarity and strong interest to learn<br/>
-          back-end development and data science. -->
-          <!-- <br/>
-          <br/>
-          With strong interest to learn<br/>back-end technologies and/or data science.  -->
-          <br/>
-          <br/>
-          <div style="line-height: 30px;">
-            Go ahead and explore the buildings.<br/>
-            To move around, use <span style='color:white; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>W</span>&nbsp<span style='color:white; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>A</span>&nbsp<span style='color:white; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>S</span>&nbsp<span style='color:white; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>D</span><br/>or the arrow keys <span style='color:#c3c3c3; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>◄</span>&nbsp<span style='color:#c3c3c3; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>▲</span>&nbsp<span style='color:#c3c3c3; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>▼</span>&nbsp<span style='color:#c3c3c3; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>►</span>.<br/>Press <span style='color:white; padding: 1px 7px 1px 7px;background-color:#0E1018; border-radius: 4px'>space</span> or <span style="top:4.5px; left: 0px; position: relative; position: relative; float: none; padding: 0;" class="close">&#10006;</span> to close dialog boxes.
-            </div>
           <br/>
           <b style="font-size: 25px">Close this dialog box to begin!</b>
           <br/>
-          <br/>
-          <!-- <span style="font-size: 20px">*assets from rpgtileset.com</span>
-          <br/>
           <br/> -->
-        <!-- </div> -->
+      </div>
+
+      <div class="modal tree-message-2">
+        <div class="modal-header"><span class="header-text"></span><span class="close">&#10006;</span></div>
+        <br/>
+        <div style="line-height: 30px;">
+          <!-- To move around, use <span class="glow3" style='color:white; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>W</span>&nbsp<span class="glow3" style='color:white; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>A</span>&nbsp<span class="glow3" style='color:white; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>S</span>&nbsp<span class="glow3" style='color:white; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>D</span><br/>or the arrow keys <span class="glow3" style='color:#c3c3c3; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>◄</span>&nbsp<span class="glow3" style='color:#c3c3c3; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>▲</span>&nbsp<span class="glow3" style='color:#c3c3c3; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>▼</span>&nbsp<span class="glow3" style='color:#c3c3c3; padding: 0.5px 7px 0 7px;background-color:#0E1018; border-radius: 4px'>►</span><br/>Press <span class="glow3" style='color:white; padding: 1px 7px 1px 7px;background-color:#0E1018; border-radius: 4px'>space</span> or <span class="glow3 close" style="top:4.5px; left: 0px; position: relative; position: relative; float: none; padding: 0;">&#10006;</span> to close dialog boxes. -->
+          <div id="typedtext2"></div>
+          <div id="typedtext2-complete"></div>
+          </div>
+        <br/>
       </div>
 
       <div class="modal education-experience">
@@ -64,7 +61,7 @@
 
             <ul class="handle-experience-junior-developer">
               <li>
-                Web Developer — Freelance (Dec 2022 – Present)
+                Web Developer <span class="grey-out">— Freelance (Dec 2022 – Present)</span>
                 <br/>
               </li>
             </ul>
@@ -74,7 +71,7 @@
               <li>
                 Senior Creative Developer, Wideout Workforces Inc.
                 <br/>
-                (Jan 2022 – Apr 2022)
+                <span class="grey-out">(Jan 2022 – Apr 2022)</span>
                 <br/>
               </li>
             </ul>
@@ -84,10 +81,37 @@
               <li>
                 Creative Developer, Wideout Workforces Inc.
                 <br/>
-                (Jun 2019 – Dec 2021)
+                <span class="grey-out">(Jun 2019 – Dec 2021)</span>
                 <br/>
               </li>
             </ul>
+
+            <div class="separator">-------------------------------------------------------------------------------------------------------------------------</div>
+
+            <br/>
+            <b>EDUCATION</b>
+            <br/>
+          
+            <ul class="handle-education-eskwelabs">
+            <!-- <ul onclick="showExperienceDetails('education-eskwelabs','<b>Data Science Fellow</b>,<br/>Eskwelabs (May 2022 – Aug 2022)')"> -->
+              <li>
+                Eskwelabs Data Science Fellow
+                <br/>
+                <span class="grey-out">(May 2022 – Aug 2022)</span>
+                <br/>
+              </li>
+            </ul>
+
+            <ul class="handle-education-college">
+            <!-- <ul onclick="showExperienceDetails('education-college', 'B.S. in Computer Science</b>,<br/>Mabini Colleges of Daet (Graduated April 2019)')"> -->
+              <li>
+                B.S. in Computer Science, Mabini Colleges of Daet
+                <br/>
+                <span class="grey-out">(Graduated April 2019)</span>
+                <br/>
+              </li>
+            </ul>
+            
 
             <div class="separator">-------------------------------------------------------------------------------------------------------------------------</div>
 
@@ -100,36 +124,10 @@
               <li>
                 Web Development Intern, FFUF Manila Inc.
                 <br/>
-                (Apr 2018 – Jun 2018)
+                <span class="grey-out">(Apr 2018 – Jun 2018)</span>
                 <br/>
               </li>
             </ul>
-
-            <div class="separator">-------------------------------------------------------------------------------------------------------------------------</div>
-
-            <br/>
-            <b>EDUCATION</b>
-            <br/>
-            <ul class="handle-education-college">
-            <!-- <ul onclick="showExperienceDetails('education-college', 'B.S. in Computer Science</b>,<br/>Mabini Colleges of Daet (Graduated April 2019)')"> -->
-              <li>
-                B.S. in Computer Science, Mabini Colleges of Daet
-                <br/>
-                (Graduated April 2019)
-                <br/>
-              </li>
-            </ul>
-          
-            <ul class="handle-education-eskwelabs">
-            <!-- <ul onclick="showExperienceDetails('education-eskwelabs','<b>Data Science Fellow</b>,<br/>Eskwelabs (May 2022 – Aug 2022)')"> -->
-              <li>
-                Eskwelabs Data Science Fellow
-                <br/>
-                (May 2022 – Aug 2022)
-                <br/>
-              </li>
-            </ul>
-            
 
             <div class="separator">-------------------------------------------------------------------------------------------------------------------------</div>
           </div>
