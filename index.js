@@ -45,7 +45,7 @@ window.addEventListener('keydown',function(e) {
                 document.querySelectorAll('.modal').forEach(function(modal){
                     modal.style.display = 'none';
                     modalOpen = 'none';
-                    let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or <b>✖</b> to close dialog boxes";
+                    let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes";
                     document.querySelector("#typedtext2").style.display = "none";
                     if(document.querySelector("#typedtext2-complete").innerHTML == "") {
                         document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
@@ -94,7 +94,7 @@ document.querySelectorAll('.close').forEach(function(close){
                 document.querySelectorAll('.modal').forEach(function(modal){
                     modal.style.display = 'none';
                     modalOpen = 'none'; 
-                    let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or <b>✖</b> to close dialog boxes";
+                    let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes";
                     document.querySelector("#typedtext2").style.display = "none";
                     if(document.querySelector("#typedtext2-complete").innerHTML == "") {
                         document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
@@ -720,7 +720,7 @@ function mobile_controls() {
                     document.querySelectorAll('.modal').forEach(function(modal){
                         modal.style.display = 'none';
                         modalOpen = 'none';   
-                        let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or <b>✖</b> to close dialog boxes";
+                        let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes";
                         document.querySelector("#typedtext2").style.display = "none";
                         if(document.querySelector("#typedtext2-complete").innerHTML == "") {
                             document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
@@ -1219,7 +1219,7 @@ document.querySelector('.handle-education-eskwelabs').ontouchend = function() {
         // "Press <span class='controls-tooltip'>space</span> or <span class='controls-tooltip'>&#10006;</span> to close dialog boxes."
         "To move around, use <b class='controls-tooltip'>W A S D</b>",
         "or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b>",
-        "Press <b class='controls-tooltip'>[space]</b> or <b>✖</b> to close dialog boxes"
+        "Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes"
     );
 
     var iSpeed2 = 40; // time delay of print out
