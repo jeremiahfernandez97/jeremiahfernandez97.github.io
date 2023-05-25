@@ -929,8 +929,13 @@ ul.dashed > li:before {
     font-size: 20px;
 } */
 
-.testimonial-item, .inner-modal-text-contents {
+.testimonial-item {
     font-family: NunitoSans, sans-serif;
+    font-weight: 200;
+}
+
+.inner-modal-text-contents {
+    font-family: Cascadia, sans-serif;
     font-weight: 200;
 }
 
