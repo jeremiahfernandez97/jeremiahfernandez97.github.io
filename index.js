@@ -33,7 +33,7 @@ window.addEventListener('keydown',function(e) {
                 document.querySelector(".tree-message-2").style.opacity = "1";
                 document.querySelector(".tree-message").style.display = "none";
                 document.querySelector(".tree-message").style.opacity = "0";
-                let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with 3 years<br/>of hands-on industry experience, and a<br/>keen eye for design and usability.<br/><br/>From interactive web pages to animated banner ads,<br/>I have been in teams with clients overseas to<br/>help them make their ideas come to life.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
                 document.querySelector("#typedtext").style.display = "none";
                 if(document.querySelector("#typedtext-complete").innerHTML == "") {
                     document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
@@ -55,6 +55,18 @@ window.addEventListener('keydown',function(e) {
         }
     }
 })
+
+document.querySelector('.mobile-controls-close').onclick = function() {
+    closeTreeModalUsingOnscreenX()
+}
+
+document.querySelector('.mobile-controls-close').ontouchstart = function(e) {
+    e.preventDefault();
+}
+
+document.querySelector('.mobile-controls-close').ontouchend = function() {
+    closeTreeModalUsingOnscreenX()
+}
 
 document.querySelectorAll('.close').forEach(function(close){
     // console.log(close.classList);
@@ -82,7 +94,7 @@ document.querySelectorAll('.close').forEach(function(close){
                 document.querySelector(".tree-message-2").style.opacity = "1";
                 document.querySelector(".tree-message").style.display = "none";
                 document.querySelector(".tree-message").style.opacity = "0";
-                let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with 3 years<br/>of hands-on industry experience, and a<br/>keen eye for design and usability.<br/><br/>From interactive web pages to animated banner ads,<br/>I have been in teams with clients overseas to<br/>help them make their ideas come to life.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
                 document.querySelector("#typedtext").style.display = "none";
                 if(document.querySelector("#typedtext-complete").innerHTML == "") {
                     document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
@@ -91,15 +103,30 @@ document.querySelectorAll('.close').forEach(function(close){
                     typewriter2();
                 }
             } else {
-                document.querySelectorAll('.modal').forEach(function(modal){
-                    modal.style.display = 'none';
-                    modalOpen = 'none'; 
-                    let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes";
-                    document.querySelector("#typedtext2").style.display = "none";
-                    if(document.querySelector("#typedtext2-complete").innerHTML == "") {
-                        document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
+                if(document.querySelector(".tree-message").style.display == "none") {
+                    document.querySelectorAll('.modal').forEach(function(modal){
+                        modal.style.display = 'none';
+                        modalOpen = 'none'; 
+                        let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes";
+                        document.querySelector("#typedtext2").style.display = "none";
+                        if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                            document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
+                        }
+                    })   
+                } else {
+                    document.querySelector(".tree-message-2").style.display = "block";
+                    document.querySelector(".tree-message-2").style.opacity = "1";
+                    document.querySelector(".tree-message").style.display = "none";
+                    document.querySelector(".tree-message").style.opacity = "0";
+                    let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                    document.querySelector("#typedtext").style.display = "none";
+                    if(document.querySelector("#typedtext-complete").innerHTML == "") {
+                        document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
                     }
-                })   
+                    if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                        typewriter2();
+                    }
+                }
             }
         }
     }
@@ -708,7 +735,7 @@ function mobile_controls() {
                     document.querySelector(".tree-message-2").style.opacity = "1";
                     document.querySelector(".tree-message").style.display = "none";
                     document.querySelector(".tree-message").style.opacity = "0";
-                    let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with 3 years<br/>of hands-on industry experience, and a<br/>keen eye for design and usability.<br/><br/>From interactive web pages to animated banner ads,<br/>I have been in teams with clients overseas to<br/>help them make their ideas come to life.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                    let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
                     document.querySelector("#typedtext").style.display = "none";
                     if(document.querySelector("#typedtext-complete").innerHTML == "") {
                         document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
@@ -717,15 +744,30 @@ function mobile_controls() {
                         typewriter2();
                     }
                 } else {
-                    document.querySelectorAll('.modal').forEach(function(modal){
-                        modal.style.display = 'none';
-                        modalOpen = 'none';   
-                        let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes";
-                        document.querySelector("#typedtext2").style.display = "none";
-                        if(document.querySelector("#typedtext2-complete").innerHTML == "") {
-                            document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
+                    if(document.querySelector(".tree-message").style.display == "none") {
+                        document.querySelectorAll('.modal').forEach(function(modal){
+                            modal.style.display = 'none';
+                            modalOpen = 'none'; 
+                            let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes";
+                            document.querySelector("#typedtext2").style.display = "none";
+                            if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                                document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
+                            }
+                        })   
+                    } else {
+                        document.querySelector(".tree-message-2").style.display = "block";
+                        document.querySelector(".tree-message-2").style.opacity = "1";
+                        document.querySelector(".tree-message").style.display = "none";
+                        document.querySelector(".tree-message").style.opacity = "0";
+                        let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                        document.querySelector("#typedtext").style.display = "none";
+                        if(document.querySelector("#typedtext-complete").innerHTML == "") {
+                            document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
                         }
-                    }) 
+                        if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                            typewriter2();
+                        }
+                    }
                 }
             }
         }
@@ -812,6 +854,14 @@ function mobile_controls() {
 
     // close.ontouchmove = function() {
     // }
+
+    // document.querySelector('.mobile-controls-close').ontouchstart = function(e) {
+    //     e.preventDefault();
+    // }
+
+    document.querySelector('.mobile-controls-close').ontouchend = function() {
+        closeTreeModalUsingOnscreenX()
+    }
 
     document.querySelector(".mobile-controls-close").ontouchstart = function (e){
         e.preventDefault();
@@ -1172,9 +1222,7 @@ document.querySelector('.handle-education-eskwelabs').ontouchend = function() {
     var aText = new Array(
         "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b>",
         " ",
-        "A developer with 3 years of hands-on industry experience, and a keen eye for design and usability.",
-        " ",
-        "From interactive web pages to animated banner ads, I have been in teams with clients overseas to help them make their ideas come to life.",
+        "A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.",
         " ",
         "<b style='font-size: 25px'>Close this dialog box to begin</b>"
     );
@@ -1254,12 +1302,23 @@ document.querySelector('.handle-education-eskwelabs').ontouchend = function() {
     }
 
     function closeTreeModalUsingOnscreenX() {
-        if (document.querySelector(".tree-message").style.display != "none") {
+
+        if(document.querySelector(".tree-message").style.display == "none") {
+            document.querySelectorAll('.modal').forEach(function(modal){
+                modal.style.display = 'none';
+                modalOpen = 'none'; 
+                let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes";
+                document.querySelector("#typedtext2").style.display = "none";
+                if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+                    document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
+                }
+            })   
+        } else {
             document.querySelector(".tree-message-2").style.display = "block";
             document.querySelector(".tree-message-2").style.opacity = "1";
             document.querySelector(".tree-message").style.display = "none";
             document.querySelector(".tree-message").style.opacity = "0";
-            let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with 3 years<br/>of hands-on industry experience, and a<br/>keen eye for design and usability.<br/><br/>From interactive web pages to animated banner ads,<br/>I have been in teams with clients overseas to<br/>help them make their ideas come to life.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+            let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
             document.querySelector("#typedtext").style.display = "none";
             if(document.querySelector("#typedtext-complete").innerHTML == "") {
                 document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
@@ -1267,27 +1326,30 @@ document.querySelector('.handle-education-eskwelabs').ontouchend = function() {
             if(document.querySelector("#typedtext2-complete").innerHTML == "") {
                 typewriter2();
             }
-        } else {
-            document.querySelectorAll('.modal').forEach(function(modal){
-                modal.style.display = 'none';
-                modalOpen = 'none';
-                let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes";
-                document.querySelector("#typedtext2").style.display = "none";
-                if(document.querySelector("#typedtext2-complete").innerHTML == "") {
-                    document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
-                }
-            })
         }
-    }
 
-    document.querySelector('.mobile-controls-close').onclick = function() {
-        closeTreeModalUsingOnscreenX()
-    }
-
-    document.querySelector('.mobile-controls-close').ontouchstart = function(e) {
-        e.preventDefault();
-    }
-
-    document.querySelector('.mobile-controls-close').ontouchend = function() {
-        closeTreeModalUsingOnscreenX()
+        // if (document.querySelector(".tree-message").style.display != "none") {
+        //     document.querySelector(".tree-message-2").style.display = "block";
+        //     document.querySelector(".tree-message-2").style.opacity = "1";
+        //     document.querySelector(".tree-message").style.display = "none";
+        //     document.querySelector(".tree-message").style.opacity = "0";
+        //     let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+        //     document.querySelector("#typedtext").style.display = "none";
+        //     if(document.querySelector("#typedtext-complete").innerHTML == "") {
+        //         document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
+        //     }
+        //     if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+        //         typewriter2();
+        //     }
+        // } else {
+        //     document.querySelectorAll('.modal').forEach(function(modal){
+        //         modal.style.display = 'none';
+        //         modalOpen = 'none';
+        //         let str2 = "To move around, use <b class='controls-tooltip'>W A S D</b><br/>or the arrow keys <b class='controls-tooltip'>◄ ▲ ▼ ►</b><br/>Press <b class='controls-tooltip'>[space]</b> or ✖ to close dialog boxes";
+        //         document.querySelector("#typedtext2").style.display = "none";
+        //         if(document.querySelector("#typedtext2-complete").innerHTML == "") {
+        //             document.querySelector("#typedtext2-complete").insertAdjacentHTML( 'beforeend', str2 );
+        //         }
+        //     })
+        // }
     }
