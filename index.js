@@ -1154,7 +1154,7 @@ document.querySelector('.handle-experience-senior-creative-developer').ontouchen
 
 //junior dev
 document.querySelector('.handle-experience-junior-developer').onclick = function() {
-    showExperienceDetails('experience-junior-developer', 'Web Developer</b><br/><span class="grey-out">Freelance (Dec 2022 – Present)</span>')
+    showExperienceDetails('experience-junior-developer', 'Web Developer</b><br/><span class="grey-out">Freelance (Dec 2022 – March 2023)</span>')
 }
 
 document.querySelector('.handle-experience-junior-developer').ontouchstart = function(e) {
@@ -1162,7 +1162,7 @@ document.querySelector('.handle-experience-junior-developer').ontouchstart = fun
 }
 
 document.querySelector('.handle-experience-junior-developer').ontouchend = function() {
-    showExperienceDetails('experience-junior-developer', 'Web Developer</b><br/><span class="grey-out">Freelance (Dec 2022 – Present)</span>')
+    showExperienceDetails('experience-junior-developer', 'Web Developer</b><br/><span class="grey-out">Freelance (Dec 2022 – March 2023)</span>')
 }
 
 //internship-web-developer
