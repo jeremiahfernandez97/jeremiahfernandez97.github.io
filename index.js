@@ -1128,7 +1128,7 @@ function showExperienceDetails(experience, header) {
 
 //creative dev
 document.querySelector('.handle-experience-creative-developer').onclick = function() {
-    showExperienceDetails('experience-creative-developer', '<b>Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jun 2019 – Dec 2021)</span>')
+    showExperienceDetails('experience-creative-developer', '<b>Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jun 2019 – April 2022)</span>')
 }
 
 document.querySelector('.handle-experience-creative-developer').ontouchstart = function(e) {
@@ -1136,25 +1136,25 @@ document.querySelector('.handle-experience-creative-developer').ontouchstart = f
 }
 
 document.querySelector('.handle-experience-creative-developer').ontouchend = function() {
-    showExperienceDetails('experience-creative-developer', '<b>Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jun 2019 – Dec 2021)</span>');
+    showExperienceDetails('experience-creative-developer', '<b>Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jun 2019 – April 2022)</span>');
 }
 
 //senior creative dev
-document.querySelector('.handle-experience-senior-creative-developer').onclick = function() {
-    showExperienceDetails('experience-senior-creative-developer', 'Senior Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jan 2022 – Apr 2022)</span>')
-}
+// document.querySelector('.handle-experience-senior-creative-developer').onclick = function() {
+//     showExperienceDetails('experience-senior-creative-developer', 'Senior Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jan 2022 – Apr 2022)</span>')
+// }
 
-document.querySelector('.handle-experience-senior-creative-developer').ontouchstart = function(e) {
-    e.preventDefault();
-}
+// document.querySelector('.handle-experience-senior-creative-developer').ontouchstart = function(e) {
+//     e.preventDefault();
+// }
 
-document.querySelector('.handle-experience-senior-creative-developer').ontouchend = function() {
-    showExperienceDetails('experience-senior-creative-developer', 'Senior Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jan 2022 – Apr 2022)</span>')
-}
+// document.querySelector('.handle-experience-senior-creative-developer').ontouchend = function() {
+//     showExperienceDetails('experience-senior-creative-developer', 'Senior Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jan 2022 – Apr 2022)</span>')
+// }
 
 //junior dev
 document.querySelector('.handle-experience-junior-developer').onclick = function() {
-    showExperienceDetails('experience-junior-developer', 'Web Developer</b><br/><span class="grey-out">Freelance (Dec 2022 – March 2023)</span>')
+    showExperienceDetails('experience-junior-developer', 'Web Developer</b><br/><span class="grey-out">Freelance (Dec 2022 – April 2023)</span>')
 }
 
 document.querySelector('.handle-experience-junior-developer').ontouchstart = function(e) {
@@ -1162,12 +1162,12 @@ document.querySelector('.handle-experience-junior-developer').ontouchstart = fun
 }
 
 document.querySelector('.handle-experience-junior-developer').ontouchend = function() {
-    showExperienceDetails('experience-junior-developer', 'Web Developer</b><br/><span class="grey-out">Freelance (Dec 2022 – March 2023)</span>')
+    showExperienceDetails('experience-junior-developer', 'Web Developer</b><br/><span class="grey-out">Freelance (Dec 2022 – April 2023)</span>')
 }
 
 //internship-web-developer
 document.querySelector('.handle-internship-web-developer').onclick = function() {
-    showExperienceDetails('internship-web-developer', '<b>Web Development Intern</b><br/><span class="grey-out">FFUF Manila Inc. (Apr 2018 – Jun 2018)</span>')
+    showExperienceDetails('internship-web-developer', '<b>Web Development Intern</b><br/><span class="grey-out">FFUF Manila Inc. (April 2018 – June 2018)</span>')
 }
 
 document.querySelector('.handle-internship-web-developer').ontouchstart = function(e) {
@@ -1175,7 +1175,7 @@ document.querySelector('.handle-internship-web-developer').ontouchstart = functi
 }
 
 document.querySelector('.handle-internship-web-developer').ontouchend = function() {
-    showExperienceDetails('internship-web-developer', '<b>Web Development Intern</b><br/><span class="grey-out">FFUF Manila Inc. (Apr 2018 – Jun 2018)</span>')
+    showExperienceDetails('internship-web-developer', '<b>Web Development Intern</b><br/><span class="grey-out">FFUF Manila Inc. (Apr 2018 – June 2018)</span>')
 }
 
 //education-college
@@ -1193,7 +1193,7 @@ document.querySelector('.handle-education-college').ontouchend = function() {
 
 //education-eskwelabs
 document.querySelector('.handle-education-eskwelabs').onclick = function() {
-    showExperienceDetails('education-eskwelabs','<b>Eskwelabs Data Science Fellow</b><br/><span class="grey-out">(May 2022 - Aug 2022)</span>')
+    showExperienceDetails('education-eskwelabs','<b>Eskwelabs Data Science Fellow</b><br/><span class="grey-out">(May 2022 - Sept 2022)</span>')
 }
 
 document.querySelector('.handle-education-eskwelabs').ontouchstart = function(e) {
@@ -1201,7 +1201,7 @@ document.querySelector('.handle-education-eskwelabs').ontouchstart = function(e)
 }
 
 document.querySelector('.handle-education-eskwelabs').ontouchend = function() {
-    showExperienceDetails('education-eskwelabs','<b>Eskwelabs Data Science Fellow</b><br/><span class="grey-out">(May 2022 - Aug 2022)</span>')
+    showExperienceDetails('education-eskwelabs','<b>Eskwelabs Data Science Fellow</b><br/><span class="grey-out">(May 2022 - Sept 2022)</span>')
 }
 
 //handle-contact-linkedin
