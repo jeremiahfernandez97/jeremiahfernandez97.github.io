@@ -10,7 +10,7 @@ window.addEventListener("load", function() {
 }, false);
 
 window.addEventListener('keydown',function(e) {
-    console.log(e.key);
+    // console.log(e.key);
     if (e.key == ' ' || e.key == 'Escape'){
         if (initializedGame == false) {
             loadGame();
