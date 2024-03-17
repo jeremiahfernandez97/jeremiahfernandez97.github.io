@@ -10,7 +10,8 @@ window.addEventListener("load", function() {
 }, false);
 
 window.addEventListener('keydown',function(e) {
-    if (e.key == ' '){
+    console.log(e.key);
+    if (e.key == ' ' || e.key == 'Escape'){
         if (initializedGame == false) {
             loadGame();
             initializedGame = true;
@@ -33,7 +34,7 @@ window.addEventListener('keydown',function(e) {
                 document.querySelector(".tree-message-2").style.opacity = "1";
                 document.querySelector(".tree-message").style.display = "none";
                 document.querySelector(".tree-message").style.opacity = "0";
-                let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability from industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
                 document.querySelector("#typedtext").style.display = "none";
                 if(document.querySelector("#typedtext-complete").innerHTML == "") {
                     document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
@@ -94,7 +95,7 @@ document.querySelectorAll('.close').forEach(function(close){
                 document.querySelector(".tree-message-2").style.opacity = "1";
                 document.querySelector(".tree-message").style.display = "none";
                 document.querySelector(".tree-message").style.opacity = "0";
-                let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability from industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
                 document.querySelector("#typedtext").style.display = "none";
                 if(document.querySelector("#typedtext-complete").innerHTML == "") {
                     document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
@@ -118,7 +119,7 @@ document.querySelectorAll('.close').forEach(function(close){
                     document.querySelector(".tree-message-2").style.opacity = "1";
                     document.querySelector(".tree-message").style.display = "none";
                     document.querySelector(".tree-message").style.opacity = "0";
-                    let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                    let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability from industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
                     document.querySelector("#typedtext").style.display = "none";
                     if(document.querySelector("#typedtext-complete").innerHTML == "") {
                         document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
@@ -735,7 +736,7 @@ function mobile_controls() {
                     document.querySelector(".tree-message-2").style.opacity = "1";
                     document.querySelector(".tree-message").style.display = "none";
                     document.querySelector(".tree-message").style.opacity = "0";
-                    let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                    let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability from industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
                     document.querySelector("#typedtext").style.display = "none";
                     if(document.querySelector("#typedtext-complete").innerHTML == "") {
                         document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
@@ -759,7 +760,7 @@ function mobile_controls() {
                         document.querySelector(".tree-message-2").style.opacity = "1";
                         document.querySelector(".tree-message").style.display = "none";
                         document.querySelector(".tree-message").style.opacity = "0";
-                        let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+                        let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability from industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
                         document.querySelector("#typedtext").style.display = "none";
                         if(document.querySelector("#typedtext-complete").innerHTML == "") {
                             document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
@@ -1126,6 +1127,19 @@ function showExperienceDetails(experience, header) {
 
 // experiences = ['experience-creative-developer', 'experience-senior-creative-developer', 'internship-web-developer', 'education-college', 'education-eskwelabs']
 
+//vinta dev
+document.querySelector('.handle-experience-vinta-developer').onclick = function() {
+    showExperienceDetails('experience-vinta-developer', '<b>Web Developer</b><br/><span class="grey-out">Vinta Technologies (Jan 2024 – Present)</span>')
+}
+
+document.querySelector('.handle-experience-vinta-developer').ontouchstart = function(e) {
+    e.preventDefault();
+}
+
+document.querySelector('.handle-experience-vinta-developer').ontouchend = function() {
+    showExperienceDetails('experience-vinta-developer', '<b>Web Developer</b><br/><span class="grey-out">Vinta Technologies (Jan 2024 – Present)</span>');
+}
+
 //creative dev
 document.querySelector('.handle-experience-creative-developer').onclick = function() {
     showExperienceDetails('experience-creative-developer', '<b>Creative Developer</b><br/><span class="grey-out">Wideout Workforces Inc. (Jun 2019 – April 2022)</span>')
@@ -1222,7 +1236,7 @@ document.querySelector('.handle-education-eskwelabs').ontouchend = function() {
     var aText = new Array(
         "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b>",
         " ",
-        "A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.",
+        "A developer with a keen eye for design and usability from industry experience, working with people locally and overseas.",
         " ",
         "<b style='font-size: 25px'>Close this dialog box to begin</b>"
     );
@@ -1318,7 +1332,7 @@ document.querySelector('.handle-education-eskwelabs').ontouchend = function() {
             document.querySelector(".tree-message-2").style.opacity = "1";
             document.querySelector(".tree-message").style.display = "none";
             document.querySelector(".tree-message").style.opacity = "0";
-            let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+            let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability from industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
             document.querySelector("#typedtext").style.display = "none";
             if(document.querySelector("#typedtext-complete").innerHTML == "") {
                 document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
@@ -1333,7 +1347,7 @@ document.querySelector('.handle-education-eskwelabs').ontouchend = function() {
         //     document.querySelector(".tree-message-2").style.opacity = "1";
         //     document.querySelector(".tree-message").style.display = "none";
         //     document.querySelector(".tree-message").style.opacity = "0";
-        //     let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability and 3 years of industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
+        //     let str = "<b style='font-size: 25px'>Hello, I'm Jeremiah!</b><br/><br/>A developer with a keen eye for design and usability from industry experience, working with people locally and overseas.<br/><br/><b style='font-size: 25px'>Close this dialog box to begin</b><br/>";
         //     document.querySelector("#typedtext").style.display = "none";
         //     if(document.querySelector("#typedtext-complete").innerHTML == "") {
         //         document.querySelector("#typedtext-complete").insertAdjacentHTML( 'beforeend', str );
