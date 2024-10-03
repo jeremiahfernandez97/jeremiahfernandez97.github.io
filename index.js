@@ -1127,9 +1127,22 @@ function showExperienceDetails(experience, header) {
 
 // experiences = ['experience-creative-developer', 'experience-senior-creative-developer', 'internship-web-developer', 'education-college', 'education-eskwelabs']
 
+//kblink dev
+document.querySelector('.handle-experience-kblink-developer').onclick = function() {
+    showExperienceDetails('experience-kblink-developer', '<b>Full Stack Developer</b><br/><span class="grey-out">KBlink.ph (May 2024 – Present)</span>')
+}
+
+document.querySelector('.handle-experience-kblink-developer').ontouchstart = function(e) {
+    e.preventDefault();
+}
+
+document.querySelector('.handle-experience-kblink-developer').ontouchend = function() {
+    showExperienceDetails('experience-kblink-developer', '<b>Full Stack Developer</b><br/><span class="grey-out">KBlink.ph (May 2024 – Present)</span>')
+}
+
 //vinta dev
 document.querySelector('.handle-experience-vinta-developer').onclick = function() {
-    showExperienceDetails('experience-vinta-developer', '<b>Web Developer</b><br/><span class="grey-out">Vinta Technologies (Jan 2024 – Present)</span>')
+    showExperienceDetails('experience-vinta-developer', '<b>Web Developer</b><br/><span class="grey-out">Vinta Technologies (Jan 2024 – April 2024)</span>')
 }
 
 document.querySelector('.handle-experience-vinta-developer').ontouchstart = function(e) {
@@ -1137,7 +1150,7 @@ document.querySelector('.handle-experience-vinta-developer').ontouchstart = func
 }
 
 document.querySelector('.handle-experience-vinta-developer').ontouchend = function() {
-    showExperienceDetails('experience-vinta-developer', '<b>Web Developer</b><br/><span class="grey-out">Vinta Technologies (Jan 2024 – Present)</span>');
+    showExperienceDetails('experience-vinta-developer', '<b>Web Developer</b><br/><span class="grey-out">Vinta Technologies (Jan 2024 – April 2024)</span>');
 }
 
 //creative dev
