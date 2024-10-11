@@ -671,7 +671,9 @@ div.gallery:hover {
 
 div.gallery img {
     width: 100%;
-    height: auto;
+    max-height: 124px;
+    object-fit: cover;
+    object-position: 0% 30%;
 }
 
 div.desc {
