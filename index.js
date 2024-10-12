@@ -2,16 +2,19 @@ console.log('begin')
 gameResize();
 mobile_controls()
 
+let disableControls = true
+
 window.addEventListener("load", function() {
     document.querySelector('.loading').style.display = 'none';
     document.querySelector('.game').style.display = 'block';
     document.querySelector('.modal').style.opacity = '1';
     typewriter();
+    disableControls = false;
 }, false);
 
 window.addEventListener('keydown',function(e) {
     // console.log(e.key);
-    if (e.key == ' ' || e.key == 'Escape'){
+    if (disableControls == false && (e.key == ' ' || e.key == 'Escape')){
         if (initializedGame == false) {
             loadGame();
             initializedGame = true;
