@@ -669,6 +669,13 @@ div.gallery:hover {
     border: 1px solid #777;
 }
 
+div.gallery.no-hover:hover {
+    border: 1px solid #ccc;
+    cursor: not-allowed;
+}
+
+
+
 div.gallery img {
     width: 100%;
     max-height: 124px;
