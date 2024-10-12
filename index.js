@@ -12,7 +12,7 @@ window.addEventListener("load", function() {
 window.addEventListener('keydown',function(e) {
     // console.log(e.key);
     if (e.key == ' ' || e.key == 'Escape'){
-        if (initializedGame == true) {
+        if (initializedGame == false) {
             loadGame();
             initializedGame = true;
             playSound(startGameSound, .050);
